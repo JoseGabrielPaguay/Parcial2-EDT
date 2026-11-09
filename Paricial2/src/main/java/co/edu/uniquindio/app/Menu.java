@@ -2,8 +2,14 @@ package co.edu.uniquindio.app;
 
 import co.edu.uniquindio.ejercicios.Ejercicio1;
 import co.edu.uniquindio.ejercicios.Ejercicio2;
+import co.edu.uniquindio.ejercicios.Ejercicio3;
+import co.edu.uniquindio.ejercicios.Ejercicio4;
+import co.edu.uniquindio.estructuras.ArbolBinarioBusqueda;
+import co.edu.uniquindio.estructuras.Cola;
 import co.edu.uniquindio.estructuras.Pila;
 import co.edu.uniquindio.modelo.Caja;
+import co.edu.uniquindio.modelo.Paquete;
+import co.edu.uniquindio.modelo.TipoEntrega;
 
 import java.util.Scanner;
 
@@ -22,12 +28,8 @@ public class Menu {
     // Datos con los que se trabaja en cada ejercicio
     private static Pila<Caja> cajas = new Pila<>();
     private static Pila<String> historial = new Pila<>();
-
-    // Para activar los ejercicios 3 y 4, se quitan los // de estas dos lineas
-    // y se agregan arriba los import de Cola, Paquete, TipoEntrega, Ejercicio3,
-    // ArbolBinarioBusqueda y Ejercicio4 (IntelliJ los pone solo con Alt + Enter).
-    // private static Cola<Paquete> paquetes = new Cola<>();
-    // private static ArbolBinarioBusqueda arbol = new ArbolBinarioBusqueda();
+    private static Cola<Paquete> paquetes = new Cola<>();
+    private static ArbolBinarioBusqueda arbol = new ArbolBinarioBusqueda();
 
     public static void main(String[] args) {
         int opcion = -1;
@@ -177,13 +179,10 @@ public class Menu {
     }
 
     // ------------------------------------------------------------------
-    // EJERCICIO 3: seleccion de paquetes (Gabriel)
-    // Cuando el Ejercicio3 este en main, se quitan los comentarios.
+    // EJERCICIO 3: seleccion de paquetes
     // ------------------------------------------------------------------
 
     private static void menuEjercicio3() {
-        System.out.println("El ejercicio 3 todavia no esta en el proyecto.");
-        /*
         int opcion = -1;
         while (opcion != 0) {
             System.out.println();
@@ -242,17 +241,13 @@ public class Menu {
                     System.out.println("Esa opcion no existe.");
             }
         }
-        */
     }
 
     // ------------------------------------------------------------------
-    // EJERCICIO 4: equipos por rango (Juan Manuel)
-    // Cuando el Ejercicio4 este en main, se quitan los comentarios.
+    // EJERCICIO 4: equipos por rango
     // ------------------------------------------------------------------
 
     private static void menuEjercicio4() {
-        System.out.println("El ejercicio 4 todavia no esta en el proyecto.");
-        /*
         int opcion = -1;
         while (opcion != 0) {
             System.out.println();
@@ -311,7 +306,6 @@ public class Menu {
                     System.out.println("Esa opcion no existe.");
             }
         }
-        */
     }
 
     // ------------------------------------------------------------------
